@@ -16,3 +16,16 @@ DOCKERHUB_USER - login (Docker)
 - install dependencies, setup users
 
 5. code . (w terminalu bedac w katalogu repo otwiera w visual studio code)
+
+6. Po utworzeniu dockerfile i .dockerignore (w terminualu bedac w katalogu repo)
+docker build .
+
+7. docker-compose.yml 
+   docker-compose build
+
+8. linting - tool to check code formatting, highlights errors, typos etc - in this course - flake8 package (mozna to uruchomic przez docker compose)
+    docker-compose run --rm app sh -c "flake8" 
+[requirements.dev.txt] - nie chcemy uruchamiac lintingu zawsze - dlatego dodajemy warunki w docker-compose.yml i dockerfile
+
+9. Testing - Django test suite
+    docker-compose run --rm app sh -c "python manage.py test"

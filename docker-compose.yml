@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      #for linting
+      args:
+        - DEV=true
+    #port mapping local - docker
+    ports:
+      - "8000:8000"
+    #mapping directory (in real time the same)
+    volumes:
+      - ./app:/app
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
