@@ -35,6 +35,8 @@ docker build .
 
 10. Startowanie projektu (po calej wczesniejszej konfiguracji)
     docker-compose run --rm app sh -c "django-admin startproject app ."
+    template app:
+    docker-compose run --rm app sh -c "python manage.py startapp core" 
 
 11. Startowanie dev server
     docker-compose up

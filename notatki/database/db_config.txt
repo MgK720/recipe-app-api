@@ -50,3 +50,10 @@ DATABASES = {
         'PASSWORD': os.environ.get('DB_PASSWORD')
     }
 }
+
+
+6.race condition 
+problem w dockerfile - database moze nie zdążyć się uruchomić i wtedy warunek w komponencie app (ktory wymaga najpierw uruchomienia db) nie zostanie spełniony = django app sie nie uruchomi
+rozwiązanie - wait for db - continue when database ready
+
+7. 
