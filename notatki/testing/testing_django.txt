@@ -1,0 +1,55 @@
+1. Django test framework - build in framework
+based on the unittest - but additional features eg. Test client - dummy web browser, simulate authentication, temp database
+
+2. Django REST Framework adds features: api test client
+
+3. Where do you put tests: tests.py added to each app or create tests/ subdirectory (but dont use both)
+   Test directiories must contain __init__.py !!!
+
+4. Test database - specific database for tests
+    runs test -> clears data and then run next test
+
+5. Test classes
+    SimpleTestCase - No db integration, if no database required, save time
+    TestCase - db integration, if database required
+
+6.eg
+
+from django.test import SimpleTestCase
+from app_two import views
+
+class ViewsTests(SimpleTestCase):
+
+    def test_make_list_unique(self):  # musi tutaj zaczynać się na test
+        sample_items = [1,1,2,3,4]
+
+        res = views.remove_duplicates(sample_items)
+
+        self.assertEqual(res, [1,2,3,4,5])
+
+8. how to run? 
+    python manage.pu test
+
+9. How in TDD
+test -> code
+
+10. Mocking 
+  override or change behaviour of dependencies, isolate code 
+  avoid relying on external services
+
+eg. register_user() -> create_in_db() -> send_welcome_email() -- nie chcemy wysylać maila 
+                                         nie wyslemy maila, ale sprawdzimy czy funkcja zostala przywołana prawidłowo
+
+how to mock code?
+    use unittest.mock
+        MagickMock/Mock - class to replace real objects
+        patch - overrides code for tests
+
+11. Testing web requests
+ Django REST Framework APIClient
+
+ from rest_framework.test import APIClient
+
+
+12. common problems:
+a> missing __init__.py in tests/
