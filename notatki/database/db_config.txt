@@ -58,5 +58,25 @@ rozwiązanie - wait for db - continue when database ready
 
     tests/test_commands.py
     management/commands/wait_for_db.py
-    
+
     docker-compose run --rm app sh -c "python manage.py wait_for_db"
+
+7. Database migrations
+Django Orm - Object Relational Mapper, Abstraction layare for data
+Django handles database structure and changes 
+
+define models - generate migration files - setup database - store data
+
+each model maps to a table
+
+Models contain:
+ - Name 
+ - Fields
+ - other metadata
+ - custom Python logic
+
+https://docs.djangoproject.com/en/5.0/topics/db/models/
+
+Run it after wait_for_db !!!!
+    python manage.py makemigrations
+    python manage.py migrate
