@@ -21,7 +21,7 @@ DOCKERHUB_USER - login (Docker)
 docker build .
 
 7. docker-compose.yml 
-   docker-compose build
+   docker-compose build ---- uzywac gdy zmieniamy configi itp (rebuilding)
 
 8. linting - tool to check code formatting, highlights errors, typos etc - in this course - flake8 package (mozna to uruchomic przez docker compose)
 

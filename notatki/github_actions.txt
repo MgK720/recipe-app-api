@@ -18,3 +18,9 @@ Various plans available
 register on hub.docker.com
 use docker login during job
 set secrets on github
+
+git add .
+git commit -am ""
+git push origin
+
+ - repo - Actions 
