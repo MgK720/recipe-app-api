@@ -1,0 +1,8 @@
+1. PostgreSQL works well with Django
+
+2. Architecture
+Docker Compose:
+ a> database (PostgreSQL)
+ b> App (Django)
+
+3.
