@@ -18,7 +18,7 @@ RUN python -m venv /py && \
     #upgrade pip (package installer)
     /py/bin/pip install --upgrade pip && \
     #postgresql-client
-    apk add --update --nocache postgresql-client && \
+    apk add --update --no-cache postgresql-client && \
     #postgresql-client dependencies
     apk add --update --no-cache --virtual .tmp-build-deps \
         build-base postgresql-dev musl-dev && \
