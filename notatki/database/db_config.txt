@@ -56,4 +56,7 @@ DATABASES = {
 problem w dockerfile - database moze nie zdążyć się uruchomić i wtedy warunek w komponencie app (ktory wymaga najpierw uruchomienia db) nie zostanie spełniony = django app sie nie uruchomi
 rozwiązanie - wait for db - continue when database ready
 
-7. 
+    tests/test_commands.py
+    management/commands/wait_for_db.py
+    
+    docker-compose run --rm app sh -c "python manage.py wait_for_db"

@@ -41,3 +41,5 @@ docker build .
 11. Startowanie dev server
     docker-compose up
     127.0.0.1:8000 - strona testowa
+
+12. # noqa <- dodanie takiego komentarza w linii powoduje ze flake 8 "nie zwraca na to uwagi"
