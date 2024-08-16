@@ -17,6 +17,11 @@ ARG DEV=false
 RUN python -m venv /py && \
     #upgrade pip (package installer)
     /py/bin/pip install --upgrade pip && \
+    #postgresql-client
+    apk add --update --nocache postgresql-client && \
+    #postgresql-client dependencies
+    apk add --update --no-cache --virtual .tmp-build-deps \
+        build-base postgresql-dev musl-dev && \
     #install required packages
     /py/bin/pip install -r /tmp/requirements.txt && \
     #jesli w komendzie ustalimy nasz arg DEV na true to uruchomimy wersje dev (linting etc)
@@ -25,6 +30,8 @@ RUN python -m venv /py && \
     fi &&  \
     #remove temp txt file (docker image must be as lightweight as possible)
     rm -rf /tmp && \
+    #remove temp postgresql-client required dependencies
+    apk del .tmp-build-deps && \
     #DO NOT USE ROOT USER IN DOCKER IMAGES (FULL ACCESS)
     adduser \
         --disabled-password \

@@ -5,4 +5,35 @@ Docker Compose:
  a> database (PostgreSQL)
  b> App (Django)
 
-3.
+3. docker-compose.yml
+depends_on:
+      # it should wait for db component
+      - db
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - dev-db-data:/var/lib/postgresql/data
+    environment:
+      # This data should be secrets
+      - POSTGRES_DB=devdb
+      - POSTGRES_USER=devuser
+      - POSTGRES_PASSWORD=changeme
+
+volumes:
+  dev-db-data:
+
+4. Setting env variables (pulling in settings.py)
+psycopg2 - postgreSQL adaptor for Python (supported by Django)
+
+how to install psycopg2?
+    psycopg2-binary (good for development not for production)
+    psycopg2 (compiles from source - required additional dependencies - easy to install with Docker)
+        dependencies: C compiler, python3-dev, libpq-dev (from docs)
+        dependencies: postgresql-client, build-base, postgresql-dev, musl-dev (packages for Alpine)
+                      (all time required)(this 3 just for installing process)
+
+we added this dependencies in dockerfile + in requirements.txt
+
+docker-compose down
+docker-compose build
+docker-compose up
