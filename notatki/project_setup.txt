@@ -1,0 +1,18 @@
+1. Why Docker?
+- consistent dev and prod environment
+- easier collaboration (na tym samym srodowisku mozna udostepniac pełną apke - zawsze zadziala na kazdej maszynie tak samo [brak problemow z wersjami paczek., pythona, db itp....])
+- easier cleanup (nie trzeba na koniec robienia projektu usuwac wszystkich potrzebnych paczek itp - tylko cały image)
+2. git clone https://github.com/MgK720/recipe-app-api.git
+3. GENEROWANIE TOKENU DOCKER HUB
+
+kopiowanie loginu i tokenu
+dodanie nastepujących actions secrets w github repo settings:
+DOCKERHUB_TOKEN - wygenerowany token (Docker)
+DOCKERHUB_USER - login (Docker)
+
+4. using docker and Django together:
+- create dockerfile
+- lists steps for creating image ( base image - python )
+- install dependencies, setup users
+
+5. code . (w terminalu bedac w katalogu repo otwiera w visual studio code)

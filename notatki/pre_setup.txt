@@ -1,0 +1,47 @@
+1. chocolate package manager 
+2. Recipe API - authentication, objects, filtering, sorting, uploading and viewing images (Django 3.2)
+3. Plan kursu - 
+    Design, 
+    Test development(TDD), 
+    system setup, 
+    project setup, 
+    configure github Actions, 
+    TDD with Django, 
+    configure DB, 
+    models, 
+    Django Admin, 
+    APi Documentation Auto, 
+    Api, 
+    Filtering, 
+    deploy to AWS
+4. Code checker - codechecker.app 
+5. Swagger Ui - auto Documentation, testing
+6. Django, REST FRAMEWORK, PostgreSQL
+7. Docker
+8. Github Actions - testing and linting
+
+9. Structure:
+app/ - Django project
+app/core/ - shared code
+app/user/ - user - auth token etc.
+app/recipe/ - recipe related code
+
+10. What is TDD?
+- Unit Tests - conditions/inputs - run a piece of code, check output with assertions
+
+logiczne podejscie - kod -> test
+Lepsze podejscie - test -> dopiero kod
+
+dlaczego?
+lepsze rozumienie kodu
+pewnosc dzialania
+mniej bugow
+
+11. co potrzebne?
+VSCode
+Docker Desktop
+Git
+
+12. Jak sprawdzic czy wszystko działa?
+docker-compose --version
+git--version
