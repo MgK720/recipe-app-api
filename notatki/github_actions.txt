@@ -1,0 +1,20 @@
+1. co to?
+-automate tasks, run jobs when code changes
+common uses:
+deployment, code linting, unit tests
+
+trigger (eg push to GitHub) -> set job (eg Run init tests) -> result (success/fail)
+
+2. Pricing:
+charged per minutes
+2000 free minutes
+Various plans available
+
+3. configuration
+ - create a config file at .github/workflows/checks.yml
+ - set trigger
+ - add steps
+
+register on hub.docker.com
+use docker login during job
+set secrets on github

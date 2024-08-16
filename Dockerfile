@@ -21,7 +21,7 @@ RUN python -m venv /py && \
     /py/bin/pip install -r /tmp/requirements.txt && \
     #jesli w komendzie ustalimy nasz arg DEV na true to uruchomimy wersje dev (linting etc)
     if [ $DEV = "true"]; \
-        then /py/bin/pip install -r requirements.dev.txt ; \
+        then /py/bin/pip install -r /tmp/requirements.dev.txt ; \
     fi &&  \
     #remove temp txt file (docker image must be as lightweight as possible)
     rm -rf /tmp && \

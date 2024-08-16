@@ -24,8 +24,18 @@ docker build .
    docker-compose build
 
 8. linting - tool to check code formatting, highlights errors, typos etc - in this course - flake8 package (mozna to uruchomic przez docker compose)
+
+[requirements.dev.txt] - nie chcemy uruchamiac lintingu zawsze - dlatego dodajemy warunki w docker-compose.yml i dockerfile (test docker-compose build)
+/app/.flake8 ---- flake8 configuration file
+
     docker-compose run --rm app sh -c "flake8" 
-[requirements.dev.txt] - nie chcemy uruchamiac lintingu zawsze - dlatego dodajemy warunki w docker-compose.yml i dockerfile
 
 9. Testing - Django test suite
     docker-compose run --rm app sh -c "python manage.py test"
+
+10. Startowanie projektu (po calej wczesniejszej konfiguracji)
+    docker-compose run --rm app sh -c "django-admin startproject app ."
+
+11. Startowanie dev server
+    docker-compose up
+    127.0.0.1:8000 - strona testowa
