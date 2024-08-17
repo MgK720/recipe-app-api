@@ -57,4 +57,12 @@ class Migration(migrations.Migration):
     ]
 
 4. Testing again
-    ocker-compose run --rm app sh -c "python manage.py test"
+    docker-compose run --rm app sh -c "python manage.py test"
+
+5. superuser support
+
+6.Admin panel
+    127.0.0.1:8000/admin
+
+    creating superuser
+    docker-compose run --rm app sh -c "python manage.py createsuperuser"
