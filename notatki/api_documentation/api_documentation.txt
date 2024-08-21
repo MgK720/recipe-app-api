@@ -1,0 +1,26 @@
+1. What to document?
+    everything needed to use the API
+    paths
+    supported methods (GET, POST, PUT, PATCH, DELETE)
+    Format of payloads (inputs)
+    Format of responses (outputs)
+    Authentication process
+
+2. Options for documentation
+    Manual (Word doc, Markdown)
+    Automated (use metadata from code (comments))
+    Generate documentation pages
+
+3. Auto docs with DRF (Django Rest Framework)
+    drf-spectacular
+
+    This generates schema <- it can be used by another tools
+    Browsable web interface
+
+how it works?:
+    - generate "schema" file (OpenAPI Schema) [YAML/JSON formats]
+    - Parse schema into GUI
+
+https://drf-spectacular.readthedocs.io/en/latest/readme.html#installation
+https://pypi.org/project/drf-spectacular/
+https://drf-spectacular.readthedocs.io/en/latest/index.html
