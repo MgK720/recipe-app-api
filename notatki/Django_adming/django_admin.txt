@@ -1,0 +1,5 @@
+1. Graphical user interface for models (crud)
+2. Very little code required
+3. How to enable?
+    enabled per model inside admin.py
+    admin.site.register(ModelName)
