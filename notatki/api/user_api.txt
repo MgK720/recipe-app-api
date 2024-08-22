@@ -5,3 +5,8 @@
 3. user/views.py
 
 4. user/urls.py and app/urls.py
+
+5. In Swagger testowanie authorize - Token 43aeb78428748273498278
+
+6. PUT - zmiana wszystkich danych
+   PATCH - zmiana wybranych danych
