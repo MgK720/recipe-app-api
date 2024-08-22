@@ -1,0 +1,7 @@
+1. docker-compose run --rm app sh -c "python manage.py startapp user"
+
+2. user/serializers.py
+
+3. user/views.py
+
+4. user/urls.py and app/urls.py
