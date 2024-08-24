@@ -1,0 +1,14 @@
+1. APIView vs ViewSets
+View - handles a request made to a URL, DRF uses classes - reusable logic, you can override behaviour
+APIView and ViewSets = DRF base classes
+a> APIView - focused around HTTP methods (GET,POST,PUT,PATCH,DELETE)
+            - useful for non CRUD APIs (auth, jobs, external apis)
+
+b> Viewsets - focused arounf actions (retrieve, list, update, partial update, destroy)
+            - map to Django models
+            - use Routers to generate URLs - great for CRUD operations on models
+
+2. core/models.py -> admin.py (admin.site.register(models.Recipe))
+    docker-compose run --rm app sh -c "python manage.py makemigrations"
+
+3. docker-compose run --rm app sh -c "python manage.py startapp recipe"
