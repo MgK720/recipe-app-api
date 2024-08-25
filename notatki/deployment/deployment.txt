@@ -1,0 +1,38 @@
+1. https://www.youtube.com/watch?v=IoxHUrbiqUo
+2. Ways:
+a> Directly on a server (directly or docker)
+b> Serverless Cloud (Google Cloud Run/ Google App Engine)
+                    (AWS Elastic Beanstalk/ECS Fargate)
+3. Course option - Single VPS on AWS (EC2)
+                   Docker/Docker compose
+
+        EC2 Instance Server(docker) <-> Internet users
+
+4. Why?
+- Simple solution
+- Great for testing during development
+- Low cost
+5. Steps
+- Configure project for deployment
+- Create server on AWS
+- Deploy app
+6. Steps details - configure project
+- Setup a Proxy
+- handle static/ media files
+- configuration
+7. Why we use reverse proxy?
+- Best practice when deploying Django
+- WSGI server great at executing Python
+- web servers - serve data really efficiently
+8. App we'll use:
+- nginx (open source, fast, secure, production grade)
+- uWSGI (open source, fast, lightweight, simple to use)
+- Docker compose (pulls it all together)
+9. handling secrets:
+- Env variables (popular, simple) <- we'll use this (.env)
+- Secret managers
+10. Using AWS
+- popular
+- must keep your account secure
+        (MFA, strong password)
+- you must follow best practice security !!!!
