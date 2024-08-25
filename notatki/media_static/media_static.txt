@@ -30,4 +30,5 @@ GET /static/static/admin/style.css <- /vol/web/static/admin/style.css
             python manage.py collectstatic
     - Puts all static files into STATIC_ROOT
 
-5. Dockerfile -> docker-compose.yml -> settings.py ->app/urls.py
+5. Dockerfile -> docker-compose.yml -> settings.py -> app/urls.py
+-> models.py -> docker-compose run --rm app sh -c "python manage.py makemigrations"
